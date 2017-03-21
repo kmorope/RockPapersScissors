@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void PlayScene(string scene)
+    {
+        if (PlayerPrefs.GetInt("audio") == 1)
+            this.GetComponent<AudioSource>().Play();
+        SceneChange(scene);
+    }
+
+    private void SceneChange(string scene)
+    {
+        SceneLoader.LoadScene(scene);
+    }
+
 }

@@ -7,7 +7,12 @@ public class Card{
     private CardsType _tipoCarta;
 
     public Card(CardsType tipo){
-        this._tipoCarta = tipo;
+        _tipoCarta = tipo;
+    }
+
+    public CardsType TipoCarta()
+    {
+        return _tipoCarta;
     }
 
 }
